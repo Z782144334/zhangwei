@@ -1,3 +1,5 @@
 # coding = utf-8
 import os
-import MySQL
+import sys
+import time
+print("zhangwei")
