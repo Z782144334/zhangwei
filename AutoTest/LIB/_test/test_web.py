@@ -6,6 +6,7 @@
 @Email   : 782144334@qq.com
 @Software: PyCharm
 """
+import time
 import unittest
 from LIB.Selenium.web_auto import WebDriver
 from selenium import webdriver
@@ -17,7 +18,7 @@ class WebTest(unittest.TestCase):
         self.url = "https://www.baidu.com"
         self.driver = webdriver.Chrome()
         self.driver.get(self.url)
-        # self.base_lei = WebDriver(self.driver)
+        self.base_lei = WebDriver(self.driver)
 
     def tearDown(self):
         # 清空cookies
@@ -29,4 +30,13 @@ class WebTest(unittest.TestCase):
 
         :return:
         """
-        pass
+        self.driver.get(self.url + "/")
+        # self.driver.find_element_by_id("kw").clear()
+        # self.driver.find_element_by_id("kw").send_keys("unittest")
+        self.driver.find_element_by_link_text("新闻").click()
+
+        self.driver.find_element_by_id("su").click()
+        time.sleep(3)
+        title = self.driver.title
+        self.assertEqual(title, u"unittest_百度搜索")
+    pass

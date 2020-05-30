@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium import webdriver
 
 
-class Base(webdriver):
+class Base(object):
 
     def __init__(self, driver):
         self.driver = driver

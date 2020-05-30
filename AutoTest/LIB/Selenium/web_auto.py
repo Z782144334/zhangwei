@@ -10,12 +10,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium import webdriver
 
 
-class WebDriver(webdriver):
+class WebDriver:
     """
     web基类
     """
-    def __init__(self, driver):
-        self.driver = driver
+    def __init__(self, web_driver):
+        self.driver = web_driver
 
     def find(self, locator):
         """
@@ -57,3 +57,8 @@ class WebDriver(webdriver):
         else:
             print("定位到的元素个数：%s" % count)
             return True
+
+
+if __name__ == '__main__':
+    driver = webdriver.Chrome()
+    # WebDriver(driver)
