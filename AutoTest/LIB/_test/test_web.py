@@ -17,7 +17,7 @@ class WebTest(unittest.TestCase):
     def setUp(self):
         self.url = "https://www.baidu.com"
         self.driver = webdriver.Chrome()
-        self.driver.get(self.url)
+        self.driver.get(self.url + "/")
         self.base_lei = WebDriver(self.driver)
 
     def tearDown(self):
@@ -30,7 +30,7 @@ class WebTest(unittest.TestCase):
 
         :return:
         """
-        self.driver.get(self.url + "/")
+        # self.driver.get(self.url + "/")
         # self.driver.find_element_by_id("kw").clear()
         # self.driver.find_element_by_id("kw").send_keys("unittest")
         self.driver.find_element_by_link_text("新闻").click()
@@ -39,4 +39,9 @@ class WebTest(unittest.TestCase):
         time.sleep(3)
         title = self.driver.title
         self.assertEqual(title, u"unittest_百度搜索")
+
     pass
+
+    def test_002(self):
+        locator = ("id", "kw")
+        self.base_lei.is_element_exist(locator)

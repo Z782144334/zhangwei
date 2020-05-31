@@ -42,7 +42,6 @@ class SendEmail():
         smtp.connect(mail_server)
         smtp.login(username, password)
         smtp.sendmail(send_address, receiver_address.split(','), message.as_string())
-        logging.info('ssss')
         smtp.quit()
 
     @staticmethod

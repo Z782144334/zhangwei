@@ -49,7 +49,8 @@ class WebDriver:
         :param locator:
         :return:
         """
-        els = self.finds(locator)
+        els = self.find(locator)
+        print(els)
         # 计算元素个数
         count = len(els)
         if len(els) < 1:
@@ -61,4 +62,4 @@ class WebDriver:
 
 if __name__ == '__main__':
     driver = webdriver.Chrome()
-    # WebDriver(driver)
+    WebDriver(driver)
