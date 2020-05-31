@@ -8,7 +8,7 @@
 """
 import time
 import unittest
-from LIB.Selenium.web_auto import WebDriver
+from commom.Selenium.web_auto import WebDriver
 from selenium import webdriver
 
 

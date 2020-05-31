@@ -9,17 +9,19 @@
 import pytest
 
 
-class TestMyPytest():
+class TestMyPyTest:
     """
     脚本基类
     """
     def setup_class(self):
         print("-------->setup_class")
+
     def teardown_class(self):
         print("-------->teardown_class")
 
     def setup(self):
         print("---->setup")
+
     def teardown(self):
         print("---->teardown")
 
@@ -32,3 +34,14 @@ class TestMyPytest():
     def test_003(self):
         print("test_003")
 
+    def pre_function(self):
+        print("环境准备")
+        return True
+
+    def post_function(self):
+        print("用例执行")
+        return True
+
+    def end_function(self):
+        print("环境恢复")
+        return True

@@ -7,8 +7,9 @@
 @Software: PyCharm
 """
 
-from LIB.E_mail import e_mail
+from commom.E_mail import e_mail
 import unittest
+
 
 class SendEmail(unittest.TestCase):
 
