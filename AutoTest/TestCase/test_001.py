@@ -17,7 +17,7 @@ class Test001(TestMyPyTest):
         print("环境准备")
         return True
 
-    def post_function(self):
+    def test_post_function(self):
         print("用例执行")
         return True
 
@@ -25,7 +25,5 @@ class Test001(TestMyPyTest):
         print("环境恢复")
         return True
 
-    def test_001(self):
-        print("test_001")
 
 
