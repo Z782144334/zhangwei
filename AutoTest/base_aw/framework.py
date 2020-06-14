@@ -8,12 +8,14 @@
 """
 
 import pytest
+from commom.logger import Log
 
 
 class TestMyPyTest(object):
     """
     脚本基类
     """
+    logge = logger()
 
     @classmethod
     def setup_class(cls):

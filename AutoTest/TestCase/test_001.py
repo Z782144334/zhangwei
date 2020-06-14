@@ -18,6 +18,9 @@ class Test001(TestMyPyTest):
         return True
 
     def test_post_function(self):
+        self.logger.info('11111111111111111111')
+        self.logger.info('22222222222222222222')
+        self.logger.debug('aaaaaaa')
         print("用例执行")
         return True
 
