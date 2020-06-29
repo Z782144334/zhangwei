@@ -7,9 +7,9 @@
 @Software: PyCharm
 """
 import unittest
-import HTMLTestRunner
+from commom.HTMLTestRunner import HTMLTestRunner
 import time
-from LIB.E_mail.e_mail import SendEmail
+from commom.E_mail.e_mail import SendEmail
 
 
 def get_test_cases(dirpath):

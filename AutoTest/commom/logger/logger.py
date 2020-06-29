@@ -11,7 +11,7 @@ import logging
 import time
 
 
-class Log:
+class Logger(object):
     """
       终端打印不同颜色的日志，在pycharm中如果强行规定了日志的颜色， 这个方法不会起作用， 但是
       对于终端，这个方法是可以打印不同颜色的日志的。
@@ -69,7 +69,7 @@ class Log:
 
 
 if __name__ == "__main__":
-    logger = Log()
+    logger = Logger()
     logger.info("12345")
     logger.debug("12345")
 
